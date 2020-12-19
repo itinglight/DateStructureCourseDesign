@@ -2,11 +2,13 @@ package game;
 
 public class StartGame {
 	public static void main(String [] args) {
-		gameUI snake =new gameUI();
+		SnakeUI snake =new SnakeUI();
 		snake.start();
 		
 		PlayMusic.playBg();
-//		System.out.println("hello world!");
+//		PlayMusic.playEat();
+		
+//		PlayMusic.playGameover();
 		
 	}
 }

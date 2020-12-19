@@ -14,7 +14,7 @@ public class PlayMusic {
 
 	public static void playBg(){
 		
-		URL url =PlayMusic.class.getClassLoader().getResource("/music/bgm.wav");
+		URL url =PlayMusic.class.getClassLoader().getResource("music/bgm.wav");
 		if(url==null) {
 			System.out.println("this url is nullPointer");
 		}else {
@@ -25,13 +25,13 @@ public class PlayMusic {
 
 	public static void playEat(){
 		
-		URL url =PlayMusic.class.getClassLoader().getResource("music/life.mav");
+		URL url =PlayMusic.class.getClassLoader().getResource("music/life.wav");
 		audio =Applet.newAudioClip(url);
 		audio.loop();
 	}
 	public static void playGameover(){
 		
-		URL url =PlayMusic.class.getClassLoader().getResource("music/gameover.mav");
+		URL url =PlayMusic.class.getClassLoader().getResource("music/gameover.wav");
 		audio =Applet.newAudioClip(url);
 		audio.loop();
 	}
