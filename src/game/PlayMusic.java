@@ -1,4 +1,5 @@
 package game;
+
 import java.applet.Applet;
 import java.applet.AudioClip;
 import java.net.URL;
@@ -6,35 +7,24 @@ import java.net.URL;
 
 public class PlayMusic {
 	public static AudioClip audio;
-
-	public PlayMusic() {
-		super();
-		// TODO Auto-generated constructor stub
-	}
-
-	public static void playBg(){
-		
-		URL url =PlayMusic.class.getClassLoader().getResource("music/bgm.wav");
-		if(url==null) {
-			System.out.println("this url is nullPointer");
-		}else {
-			audio =Applet.newAudioClip(url);
-			audio.loop();
-		}
-	}
-
-	public static void playEat(){
-		
-		URL url =PlayMusic.class.getClassLoader().getResource("music/life.wav");
-		audio =Applet.newAudioClip(url);
-		audio.loop();
-	}
-	public static void playGameover(){
-		
-		URL url =PlayMusic.class.getClassLoader().getResource("music/gameover.wav");
-		audio =Applet.newAudioClip(url);
-		audio.loop();
+	
+	public static void playBg() {
+		URL url = PlayMusic.class.getClassLoader().getResource("music/bgm.wav");
+		audio=Applet.newAudioClip(url);
+		audio.loop(); //循环播放背景音乐
 	}
 	
+	public static void playEat() {
+		URL url = PlayMusic.class.getClassLoader().getResource("music/life.wav");
+		audio=Applet.newAudioClip(url);
+		audio.play();
+	}
 	
+	public static void playGameOver() {
+		URL url = PlayMusic.class.getClassLoader().getResource("music/gameover.wav");
+		audio=Applet.newAudioClip(url);
+		audio.play();
+	}
+	
+
 }
